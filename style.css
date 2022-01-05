@@ -3,7 +3,6 @@
     border-radius: 8px;
     padding: 8px; 
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
     max-width: fit-content;
 
 }
@@ -11,10 +10,16 @@
 .pixel {
     background-color: aquamarine;
     text-align: center;
-    height: 8px; 
-    width: 8px;
+    height: 16px; 
+    width: 16px;
+    border: solid 0.01rem rgba(0, 0, 0, 0.137);
+}
+
+.pixelChange {
+    background-color: black;
 }
 
 .pixel:hover {
     background-color: black ;
 }
+

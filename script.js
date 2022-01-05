@@ -6,15 +6,8 @@ let gridSize = userInput*userInput;
 // Log outcome of gridSize
 console.log(gridSize);
 
-// create grid with numbers input
-
-// const container = document.getElementById("container").style.gridTemplateColumns = userInput;
-
-
-
-
 // creates the EaS pixel
-const containter = document.getElementById("container").style.gridTemplateColumns = userInput; 
+const containter = document.getElementById("container").style.gridTemplateColumns = "repeat("+userInput+", 1fr)"; 
 const pixelBlock = document.createElement('div');
 pixelBlock.classList.add("pixel");
 container.append(pixelBlock);
@@ -24,3 +17,13 @@ for(i = 1; i < gridSize; i++){
     container.append(pixelBlock.cloneNode(true));
     
 }
+
+
+
+
+// function colourChange () {
+//     pixelBlock.style.add("backgroundColor: black"); 
+// }
+
+// let x = document.getElementsByClassName("pixel"); 
+// x.addEventListener("click", colourChange); 
