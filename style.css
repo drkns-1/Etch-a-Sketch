@@ -1,0 +1,20 @@
+#container {
+    border: solid 2px black;
+    border-radius: 8px;
+    padding: 8px; 
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    max-width: fit-content;
+
+}
+
+.pixel {
+    background-color: aquamarine;
+    text-align: center;
+    height: 8px; 
+    width: 8px;
+}
+
+.pixel:hover {
+    background-color: black ;
+}
