@@ -3,16 +3,15 @@
     border-radius: 8px;
     padding: 8px; 
     display: grid;
-    max-width: fit-content;
-
+    width: 400px;
+    height: 400px;
 }
 
 .pixel {
     background-color: aquamarine;
     text-align: center;
-    height: 16px; 
-    width: 16px;
     border: solid 0.01rem rgba(0, 0, 0, 0.137);
+    transition: 300ms;
 }
 
 .pixelChange {
@@ -20,7 +19,10 @@
 }
 
 .pixel:hover {
-    background-color: black ;
+    background-color: black;
 }
 
- 
+.slidecontainer {
+    display: flex;
+
+}
