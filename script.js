@@ -1,38 +1,44 @@
-//define grid size
-
+// global variables
 
 // Slider
 let slider = document.getElementById("myRange");
 let output = document.getElementById("demo");
 output.innerHTML = slider.value;
 
+
 slider.oninput = function() {
     output.innerHTML = this.value;
 }
 
+let container = document.getElementById("container");
 
-// Removes all the squares when you change the grid size
+// Removes all the squares then triggers a new grid build
 function reset(){
-    let container = document.getElementById("container");
     container.innerHTML = "";
     gridBuild();
 
 }
 
+// Declare global variables
+let pixelBlock = document.createElement('div');
+pixelBlock.setAttribute('id', 'pixel');
 
+// Function that loops through and builds grid with the correct amount of squares
 function gridBuild(){
-    userInput = slider.value;
+    let userInput = slider.value;
     let gridSize = userInput*userInput;
     // creates the EaS pixel
     const containter = document.getElementById("container").style.gridTemplateColumns = "repeat("+userInput+", 1fr)"; 
-    const pixelBlock = document.createElement('div');
-    pixelBlock.classList.add("pixel");
-
-    container.append(pixelBlock);
     // loop to relvant pixel amount
-    for(i = 1; i < gridSize; i++){
+    for(i = 0; i < gridSize; i++){
         container.append(pixelBlock.cloneNode(true)); 
     }
- 
+
 }
 
+
+// Change colour to black when hovering
+container.addEventListener("mouseover", function() {
+    console.log(pixelBlock); 
+    pixelBlock.style.backgroundColor = 'Black'; 
+});

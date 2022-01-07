@@ -8,12 +8,12 @@
     <script src="./script.js" defer></script>
     <title>DRKNS - Etch-a-Sketch</title>
 </head>
-<body>
+<body onload="gridBuild()">
     <h1>Etch-a-Sketch</h1>
     <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="4" class="slider" id="myRange">
-        <p>Value: <span id="demo"></span></p>
-        <button onclick="reset()">set grid size</button>
+        <input type="range" min="1" max="64" value="4" class="slider" id="myRange">
+        <p><span id="demo"></span></p>
+        <button onclick="reset()">New grid</button>
       </div>
 
     <div id="container">

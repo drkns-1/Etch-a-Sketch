@@ -7,19 +7,11 @@
     height: 400px;
 }
 
-.pixel {
+#pixel {
     background-color: aquamarine;
     text-align: center;
     border: solid 0.01rem rgba(0, 0, 0, 0.137);
     transition: 300ms;
-}
-
-.pixelChange {
-    background-color: black;
-}
-
-.pixel:hover {
-    background-color: black;
 }
 
 .slidecontainer {
